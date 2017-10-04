@@ -1,0 +1,3 @@
+/home/viet/test_c++/pid/build/CMakeFiles/edit_cache.dir
+/home/viet/test_c++/pid/build/CMakeFiles/rebuild_cache.dir
+/home/viet/test_c++/pid/build/CMakeFiles/pid.dir

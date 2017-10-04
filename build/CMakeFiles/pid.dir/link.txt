@@ -1,0 +1,1 @@
+/usr/bin/c++   -fPIC -Wall -Wextra -Wno-unused-parameter -Wno-strict-aliasing -std=c++11  -Ofast -march=native   CMakeFiles/pid.dir/example.cpp.o CMakeFiles/pid.dir/pid.cpp.o  -o bin/pid -rdynamic 

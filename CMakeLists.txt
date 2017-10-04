@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 2.8.11)
+project(PID)
+include_directories(include)
+if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Ofast")
+    #GCC detects CPUID
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
+    set(CFLAGS_WARN "-Wall -Wextra -Wno-unused-parameter -Wno-strict-aliasing")
+    set(CMAKE_CXX_FLAGS "-fPIC ${CFLAGS_WARN} -std=c++11 ${CMAKE_CXX_FLAGS}")
+endif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE})
+set(source pid.cpp)
+set(header pid.h)
+
+add_executable(pid example.cpp ${source} ${header})
